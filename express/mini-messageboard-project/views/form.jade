@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1=title
+
+    form(method = "POST", action = "/new")
+        div.form-group
+            label(for = user) User:
+            input#user.form-control(type = "text", placeholder = "Username", name = "user")
+            br
+            br
+        div.form-group
+            label(for = message) Message:
+            input#message.form-control(type = "text", placeholder = "Type your message", name = "message")
+            br
+            br
+            button(type = "submit") Submit
