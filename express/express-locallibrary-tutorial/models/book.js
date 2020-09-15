@@ -1,5 +1,4 @@
 var mongoose = require("mongoose");
-const { model } = require("./author");
 var Schema = mongoose.Schema;
 
 var BookSchema = new Schema({
