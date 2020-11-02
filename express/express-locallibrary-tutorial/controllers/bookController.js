@@ -152,7 +152,7 @@ exports.book_create_post = [
             authors: results.authors,
             genres: results.genres,
             book: book,
-            errors: errors.array(),
+            errors,
           });
         }
       );
