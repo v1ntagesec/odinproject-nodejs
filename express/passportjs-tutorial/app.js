@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const session = require("express-session");
@@ -7,8 +8,7 @@ const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const mongoDb =
-  "mongodb+srv://slayxbyte:m3K7VsS1eia0e3Jo@cluster0.w3oae.mongodb.net/passportjs?retryWrites=true&w=majority";
+const mongoDb = process.env.mongoDb;
 mongoose.connect(mongoDb, { useUnifiedTopology: true, useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
